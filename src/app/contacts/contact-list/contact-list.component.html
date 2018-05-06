@@ -1,0 +1,14 @@
+<table class="table table-sm table-hover">
+  <tr *ngFor="let contact of contactService.contactList">
+    <td>{{contact.FirstName}} - {{contact.LastName}}</td>
+    <td>{{contact.TelephoneNumber}}</td>
+    <td>
+      <a class="btn" (click)="showForEdit(contact)">
+        <i class="fa fa-pencil-square-o"></i>
+      </a>
+      <a class="btn text-danger" (click)="onDelete(contact.Id)">
+        <i class="fa fa-trash-o"></i>
+      </a>
+    </td>
+  </tr>
+</table>
